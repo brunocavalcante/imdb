@@ -108,7 +108,7 @@ module Imdb
       case src
       when /^(http:.+@@)/
         Regexp.last_match[1] + '.jpg'
-      when /^(http:.+?)\.[^\/]+$/
+      when /^(https:.+?)\.[^\/]+$/
         Regexp.last_match[1] + '.jpg'
       end
     end
