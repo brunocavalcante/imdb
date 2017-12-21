@@ -115,7 +115,7 @@ module Imdb
 
     # Returns a float containing the average user rating
     def rating
-      document.at('.starbar-meta b').content.split('/').first.strip.to_f rescue nil
+      document.search('.ipl-rating-star__rating').first.text.to_f rescue nil
     end
     
     # Returns an int containing the Metascore
